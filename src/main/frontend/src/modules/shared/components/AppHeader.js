@@ -19,7 +19,6 @@ export default class AppHeader extends React.Component {
           <Nav>
             <NavItem eventKey={1} href="#/">Logs</NavItem>
             <NavItem eventKey={2} href="#/summary">Summary</NavItem>
-            <NavItem eventKey={3} href="#/savings">Savings</NavItem>
           </Nav>
         </Collapse>
       </Navbar>

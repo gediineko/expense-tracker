@@ -24,12 +24,8 @@ export default function (state = logsState, action) {
     case LOGS_ACTIONS.MODAL_STATE_CHANGED:
       return state.setIn(["ui", "showModal"], action.modalState);
     case LOGS_ACTIONS.CLEAR_FIELDS:
-      // return state.set("fields", {});
-      state.get("fields").keySeq().map(key => {
-        console.log(key + "gedii");
-        state = state.setIn(["fields", key], null);
-      });
-      return state;
+      return state.set("fields", Immutable.fromJS({}));
+
     case LOGS_ACTIONS.INIT_UPDATE_FORM:
       Object.keys(action.entryData).map(key => {
         state = state.setIn(["fields", key], action.entryData[key]);

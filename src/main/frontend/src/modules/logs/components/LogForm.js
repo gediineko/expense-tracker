@@ -60,8 +60,8 @@ export default class LogForm extends React.Component {
                 </ControlLabel>
                 <select className="form-control" required="required" name="recurrence"
                         id="recurrence" onChange={this.updateField} value={store.fields.recurrence}>
-                  <option value="NONE">None</option>
                   <option value="">Select One</option>
+                  <option value="NONE">None</option>
                   <option value="DAILY">Daily</option>
                   <option value="WEEKLY">Weekly</option>
                   <option value="FORTNIGHTLY">Fortnightly</option>
