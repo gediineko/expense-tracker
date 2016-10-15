@@ -30,15 +30,16 @@ public class EntryResource {
         return ResponseEntity.ok(entryService.getEntryList(category));
     }
 
-    @GetMapping("/{category}/total")
-    public ResponseEntity<Double> getTotal(@PathVariable String category) {
-        return ResponseEntity.ok(entryService.getTotal(category));
-    }
-
     @GetMapping("/balance")
     public ResponseEntity<Double> getBalance() {
         return ResponseEntity.ok(entryService.getBalance());
     }
+
+    @GetMapping("/total/{category}")
+    public ResponseEntity<Double> getTotal(@PathVariable String category) {
+        return ResponseEntity.ok(entryService.getTotal(category));
+    }
+
 
     @PostMapping
     public ResponseEntity<EntryFormDto> create(@RequestBody EntryFormDto entryFormDto){

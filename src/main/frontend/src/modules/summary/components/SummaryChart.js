@@ -10,15 +10,15 @@ export default class SummaryEntry extends React.Component {
     let label = this.props.label;
     let data = this.props.data;
 
-    let chartData = {
+    let totalCompareData = {
       labels:  label,
       datasets: [
         {
           data: data,
           backgroundColor: [
-            'rgba(0,0,0,1)',
-            'rgba(255,255,255,1)',
-            'rgba(255,255,255,1)'
+            "#BEE3DB",
+            "#5DFDCB",
+            "#FFD6BA"
           ],
           hoverBackgroundColor: [
             "#BEE3DB",
@@ -31,8 +31,7 @@ export default class SummaryEntry extends React.Component {
 
     return (
       <div className="charts">
-        <Bar data={chartData} width="600" height="400" />
-        <Line data={chartData} width="600" height="400" />
+        <Bar data={totalCompareData} width="600" height="400" />
       </div>
     );
   }
